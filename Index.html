@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisionImage — Premium Image Compressor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-row">
+          <div class="brand-mark">V</div>
+          <div>
+            <p class="eyebrow">Premium workflow</p>
+            <h1>VisionImage</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="tool-layout">
+        <section class="panel controls-panel">
+          <div class="panel-header-row">
+            <span class="tag-pill">Image tools</span>
+            <span class="mini-stat">No server upload</span>
+          </div>
+
+          <div id="dropZone" class="upload-box">
+            <label for="imageInput" class="upload-label">
+              <span class="upload-icon">⇪</span>
+              <strong>Drag & drop image</strong>
+              <small>or click to browse</small>
+            </label>
+            <input id="imageInput" type="file" accept="image/*" />
+          </div>
+
+          <div class="control-group">
+            <label for="formatSelect">Convert to</label>
+            <select id="formatSelect">
+              <option value="image/jpeg">JPG</option>
+              <option value="image/webp">WebP</option>
+              <option value="image/png">PNG</option>
+            </select>
+          </div>
+
+          <div class="control-group range-group">
+            <div class="label-row">
+              <label for="qualityRange">Compression quality</label>
+              <span id="qualityValue">80%</span>
+            </div>
+            <input id="qualityRange" type="range" min="10" max="100" value="80" />
+          </div>
+
+          <div class="resize-grid">
+            <div class="control-group compact">
+              <label for="widthInput">Width</label>
+              <input id="widthInput" type="number" min="1" value="1200" />
+            </div>
+            <div class="control-group compact">
+              <label for="heightInput">Height</label>
+              <input id="heightInput" type="number" min="1" value="800" />
+            </div>
+          </div>
+
+          <label class="checkbox-row">
+            <input id="lockAspect" type="checkbox" checked />
+            <span>Keep aspect ratio</span>
+          </label>
+
+          <div class="button-row">
+            <button id="processBtn" class="primary-btn">Compress & Resize</button>
+            <a id="downloadBtn" class="secondary-btn" download="converted-image.jpg" hidden>
+              Download
+            </a>
+          </div>
+        </section>
+
+        <section class="panel preview-panel">
+          <div class="preview-header">
+            <h2>Preview</h2>
+            <span id="statusBadge" class="status-badge neutral">Waiting for upload</span>
+          </div>
+
+          <div class="compare-card">
+            <div id="compareSurface" class="compare-surface">
+              <img id="beforeImage" alt="Original image" />
+              <div id="afterLayer" class="after-layer">
+                <img id="afterImage" alt="Processed image" />
+              </div>
+              <div id="compareHandle" class="compare-handle">↔</div>
+            </div>
+            <input id="compareSlider" type="range" min="0" max="100" value="50" aria-label="Before after comparison" />
+          </div>
+
+          <div class="stats-box">
+            <div>
+              <span>Original</span>
+              <strong id="originalInfo">-</strong>
+            </div>
+            <div>
+              <span>Output</span>
+              <strong id="outputInfo">-</strong>
+            </div>
+            <div>
+              <span>Dimensions</span>
+              <strong id="dimensionInfo">-</strong>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
