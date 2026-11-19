@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/compress-jpg/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/compress-png/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/compress-webp/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/resize-image/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/reduce-image-size/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/bulk-image-compressor/</loc>
+  </url>
+
+  <url>
+
+    <loc>https://vision-images.pages.dev/image-optimizer/</loc>
+  </url>
+
+</urlset>
